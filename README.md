@@ -1,10 +1,9 @@
 # Money Tools by Xai
 
-A lightweight, responsive set of money utilities built with Bootstrap 5. Includes a Percentage Calculator and a Basic Calculator. The app supports light/dark themes with a persistent toggle and works entirely offline using static HTML.
+A lightweight, responsive percentage calculator built with Bootstrap 5. The app supports light/dark themes with a persistent toggle and works entirely offline using static HTML.
 
 ## Features
 - **Percentage Calculator** (`index.html`): Quickly compute X% of an amount.
-- **Basic Calculator** (`basic-calculator.html`): Add, subtract, multiply, and divide two numbers.
 - **Theme Toggle**: Dark/Light mode persisted via `localStorage` using the `data-bs-theme` attribute.
 - **Modern UI**: Gradient background, glassy navbar, subtle animations, and polished form inputs.
 - **No Build Step**: Plain HTML + Bootstrap CDN.
@@ -12,15 +11,14 @@ A lightweight, responsive set of money utilities built with Bootstrap 5. Include
 ## File Structure
 ```
 moneycalc/
-├─ index.html               # Percentage Calculator (default entry)
-├─ basic-calculator.html    # Basic Calculator
+├─ index.html               # Percentage Calculator
+├─ index.js                 # Calculator logic and theme toggle
 └─ README.md                # Project documentation
 ```
 
 ## Getting Started
-You can run this project by simply opening the HTML file(s) in a browser:
-- Double-click `index.html` (recommended entry point), or
-- Open `basic-calculator.html` directly for the basic calculator.
+You can run this project by simply opening the HTML file in a browser:
+- Double-click `index.html` to open the percentage calculator.
 
 Optionally, serve locally to match production-like behavior (helpful for relative links):
 - Python 3: `python -m http.server 8000`
@@ -29,7 +27,7 @@ Optionally, serve locally to match production-like behavior (helpful for relativ
 Then open `http://localhost:8000/` in your browser.
 
 ## Usage
-- Use the **Tools** dropdown in the navbar to switch between calculators.
+- Enter an amount and percentage to calculate the result.
 - Toggle **Dark Mode** using the switch in the navbar. The preference is saved to `localStorage` and applied on next visit.
 - Inputs support decimals. Validation prevents calculations when fields are empty or invalid.
 
